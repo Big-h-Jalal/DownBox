@@ -1,0 +1,21 @@
+{
+  "name": "downbox",
+  "productName": "Down Box Beta",
+  "version": "0.2.0",
+  "description": "DownBox Beta Version",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Jalal Chachoua & Imad Toubal",
+  "license": "ISC",
+  "dependencies": {
+    "vue": "^2.5.2"
+  },
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-packager": "^9.1.0",
+    "electron-prebuilt": "^1.4.13",
+    "vue": "^2.5.2"
+  }
+}

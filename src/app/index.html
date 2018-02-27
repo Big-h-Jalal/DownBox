@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DownBox</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="../node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+  <!-- content container -->
+  <div id="container">
+    <div id="mainbar" v-bind:class="toolbarc">
+      <div v-bind:class="iconc"><img src="img/logo.png" alt=""></div>
+      <div id="window-controls">
+          <span v-on:click="action(2)" class="btn-1"><img src="img/btn-line.png" alt=""></span>
+          <span v-on:click="action(1)" class="btn-2"><img src="img/btn-sqr.png" alt=""></span>
+          <span v-on:click="action(0)" class="btn-3"><img src="img/btn-x.png" alt=""></span>
+      </div>
+    </div>
+    <!-- side bar -->
+    <div id="side">
+      <ul>
+        <li v-bind:class="recent"><a v-on:click="sidefunc(0)"><img src="img/menu-icon-recent.png" alt=""> Recent Downloads</a></li>
+        <li v-bind:class="running"><a v-on:click="sidefunc(1)"><img src="img/menu-icon-downloading.png" alt="">Downloading</a></li>
+        <li v-bind:class="inpause"><a v-on:click="sidefunc(2)"><img src="img/menu-icon-pause.png" alt="">Paused</a></li>
+        <li v-bind:class="finished"><a v-on:click="sidefunc(3)"><img src="img/menu-icon-settings.png" alt="">Finished</a></li>
+        <li><a v-on:click=""><img src="img/menu-icon-done.png" alt="">Settings</a></li>
+      </ul>
+    </div>
+    <!-- downloads list -->
+    <div id="content">
+
+      <section class="head">
+        <h1>{{label}}</h1>
+        <div id="search">
+          <input v-model="keyword" type="text" placeholder="Search...">
+          <img src="img/search.png" alt="">
+        </div>
+      </section>
+
+      <section class="downloads">
+        <download-item v-for="item in filteredItems" v-bind:element="item" v-bind:key="item.id"></download-item>
+      </section>
+      
+    </div>
+  </div>
+  <script src="src/download_main.js"></script>
+</body>
+</html>

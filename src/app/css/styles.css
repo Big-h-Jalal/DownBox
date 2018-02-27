@@ -1,0 +1,278 @@
+*{
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-user-select: none;
+}
+p {
+  font-family: "Montserrat Light";
+}
+h1, h2 {
+  color: #09b3cd;
+}
+b {
+  font-family: Montserrat;
+}
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* App Contols */
+#app {
+  position: relative;
+}
+.toolbar{
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  margin: 0;
+  z-index: 5;
+  -webkit-app-region: drag;
+  transition: all 1s;
+}
+.splash {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 5;
+  background: linear-gradient(270deg, #5868c5 0%, #09b3cd 50%);
+}
+.icon{
+  height: 28px;
+  margin: 4px 0px 0px 20px;
+  transition: all 1s;
+}
+.logo{
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.icon img{
+  height: 100%;
+  margin-left: 2px;
+}
+#window-controls{
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  width: fit-content;
+  height: fit-content;
+  z-index: 6;
+  -webkit-app-region: no-drag;
+}
+
+#window-controls .btn-2{
+  background: #8DC63F;
+}
+
+#window-controls .btn-1{
+  background: #FBB040;
+}
+
+#window-controls .btn-3{
+  background: #EE2A7B;
+  width: 30px;
+}
+#window-controls span{
+  background: black;
+  line-height: 20px;
+  text-align: center;
+  margin: 0;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  display: relative;
+}
+#window-controls span img {
+  opacity: 0;
+  transition: opacity .5s;
+}
+#window-controls span:hover img {
+  opacity: 1;
+}
+
+#container {
+  height: 100vh;
+}
+#side *:not(img), #content{
+  padding: 20px;
+}
+
+#side {
+  width: 30%;
+  min-width: 250px;
+  height: 100%;
+  float: left;
+  color: white;
+  background: linear-gradient(40deg, #5868c5, #09b3cd);
+  overflow: hidden;
+  position: absolute;
+  padding-top: 13px;
+}
+#side a{
+  color: white;
+}
+#side ul {
+  list-style: none;
+  padding: 0;
+  margin: 60px 0
+}
+#side ul li {
+  font-size: 16px; 
+  height: 60px;
+  position: relative;
+  padding-left: 50px;
+}
+#side ul li img {
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+#side ul li.active {
+  background: rgba(255,255,255,.15);
+}
+#side ul li.active:after {
+  content: '';
+  width: 60px;
+  height: 60px;
+  background: white;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(45px, 0px) rotate(45deg) 
+}
+#side>img{
+  max-width: 280px;
+  width: 80%;
+  margin: 20px 10px; 
+}
+.head {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.head #search input {
+  line-height: 30px;
+  padding-left: 30px;
+  border-radius: 20px;
+  border: solid 2px #eee;
+  font-weight: 300;
+  width: 100%;
+}
+*:focus{
+  outline: none;
+  box-shadow: 0 5px 10px rgba(35, 103, 158, 0.10);
+}
+#search {
+  position: relative;
+  grid-column: 2;
+}
+#search img {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+#content {
+  float: left;
+  height: 100%;
+  width: 70%;
+  margin-left: 30%;
+  padding-top: 40px;
+}
+#content h1 {
+  margin-bottom: 40px;
+  font-size: 30px;
+}
+#content h1:hover{
+  cursor: default;
+}
+.download {
+  padding: 20px 20px;
+  color: #666;
+  border-radius: 5px;
+  margin: 20px 0px;
+  border: 1px solid #efefef;
+  box-shadow: 0 10px 20px rgba(35, 103, 158, 0.20);
+  display: grid;
+  grid-template-columns: 10% 60% 30%;
+  transition: all .5s;
+  cursor: pointer;
+}
+.download:hover {
+  cursor: default;
+  box-shadow: 0 20px 30px rgba(35, 103, 158, 0.20);
+  transform: translate(0, -3px)
+}
+.download-icon img {
+  height: 40px;
+}
+.download-icon{
+  position: relative;
+  
+}
+.download-icon .type {
+  position: absolute;
+  font-size: 12px;
+  background: white;
+  display: inline-block;
+  z-index: 4;
+  padding: 0 4px;
+  top: 19px;
+  left: 6px;
+  font-weight: bold;
+  color: #09b3cd;
+}
+.download a {
+  float: right;
+  line-height: 40px;
+  width: 40px;
+  text-align: center;
+  border-radius: 20px;
+  transition: all .2s;
+}
+.download a:hover{
+  background: #efefef;
+}
+.download-name {
+  overflow: hidden;
+  position: relative;
+  -webkit-user-select: text;
+}
+.download-name:after{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 40px;
+  background: linear-gradient(270deg, white, rgba(255, 255, 255, 0));
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.progress-bar {
+  height: 3px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin-top: 5px;
+  border-radius: 3px;
+  background: #efefef;
+  
+}
+.progress-bar .progress {
+  height: 100%;
+  background: red;
+  background: linear-gradient(270deg, #5868c5 0%, #09b3cd 50%);
+  
+}
+
