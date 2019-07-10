@@ -9,4 +9,4 @@
 - fixing the UI
 
 ### Word of the developers:
-this project was made by Imad toubal and Jalal Chachoua as a fun project, and it's not in the a stable state, for now.
+this project was made by Imad toubal and Jalal Chachoua as a fun project, and it's not in a stable state, for now.
