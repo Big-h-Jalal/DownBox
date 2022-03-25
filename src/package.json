@@ -13,7 +13,7 @@
     "vue": "^2.5.2"
   },
   "devDependencies": {
-    "electron": "^1.7.9",
+    "electron": "^13.6.6",
     "electron-packager": "^9.1.0",
     "electron-prebuilt": "^1.4.13",
     "vue": "^2.5.2"
